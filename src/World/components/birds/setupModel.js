@@ -5,7 +5,6 @@ function setupModel(data) {
   const clip = data.animations[0];
   const mixer = new AnimationMixer(model);
   const action = mixer.clipAction(clip);
-  action.startAt(1).setEffectiveTimeScale(1);
   action.play();
 
   model.tick = (delta) => mixer.update(delta);
